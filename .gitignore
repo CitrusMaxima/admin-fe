@@ -1,0 +1,12 @@
+# idea ignore
+.idea/
+out/
+/idea/
+*.ipr
+*.iml
+*.iws
+
+# node ignore
+/node_modules/
+/dist/
+*.log
