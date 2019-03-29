@@ -1,0 +1,8 @@
+{
+  "name": "admin-fe",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/CitrusMaxima/admin-fe.git",
+  "author": "CitrusMaxima <2663753900@qq.com>",
+  "license": "MIT"
+}
