@@ -17,8 +17,8 @@ body {
 }
 
 #page-wrapper {
-    padding: 15px 15px;
     margin: 0 0 0 260px;
+    padding: 15px 30px;
 }
 
 .text-center {
@@ -43,13 +43,11 @@ h4 {
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
     border-radius: 0px;
-
 }
 
 p {
     font-size: 16px;
     line-height: 25px;
-    padding-top: 20px;
 }
 
 .panel {
@@ -144,7 +142,6 @@ p {
 
 .panel-back {
     background-color: #fff;
-
 }
 
 .panel-default {
@@ -200,7 +197,6 @@ p {
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
     border-radius: 50px;
-
 }
 
 .panel-primary {
@@ -401,6 +397,7 @@ footer p {
 }
 
 .navbar-brand b {
+    margin-right: 5px;
     color: #2DAFCB;
 }
 
@@ -408,7 +405,7 @@ footer p {
     position: relative;
     display: inline-block;
     margin: 0px;
-    padding: 0px;
+    padding: 0px 10px;
 }
 
 .top-navbar .nav > li > a {
@@ -425,9 +422,18 @@ footer p {
     background: transparent;
 }
 
+.top-navbar .nav > li:hover .dropdown-menu {
+    display: block;
+}
+
 .top-navbar .dropdown-menu {
     min-width: 230px;
+    top: 98%;
     border-radius: 0 0 4px 4px;
+}
+
+.dropdown-menu > li > a {
+    cursor: pointer;
 }
 
 .top-navbar .dropdown-menu > li > a:hover, .top-navbar .dropdown-menu > li > a:focus {
@@ -536,9 +542,13 @@ ul.nav.nav-second-level.collapse.in {
     margin-right: 2px;
 }
 
+.top-navbar .nav > li > a > span {
+    color: #666;
+    margin-right: 5px;
+}
+
 .top-navbar .navbar-brand:hover {
     color: #2DAFCB;
-
     background-color: rgb(43, 46, 51);
 }
 
@@ -548,7 +558,6 @@ ul.nav.nav-second-level.collapse.in {
 
 .navbar-default {
     border: 0px solid black;
-
 }
 
 .navbar-header {
@@ -592,6 +601,7 @@ ul.nav.nav-second-level.collapse.in {
 ------------------------------------------------*/
 
 @media (max-width: 768px) {
+
     .top-navbar {
         position: relative;
     }
@@ -613,3 +623,5 @@ ul.nav.nav-second-level.collapse.in {
         top: 0;
     }
 }
+
+
