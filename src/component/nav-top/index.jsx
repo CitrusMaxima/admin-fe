@@ -27,7 +27,7 @@ class NavTop extends React.Component {
                         </a>
                         <ul className="dropdown-menu dropdown-user">
                             <li>
-                                <a onclick={() => {
+                                <a onClick={() => {
                                     this.onLogout()
                                 }}>
                                     <i className="fa fa-sign-out fa-fw"></i>
