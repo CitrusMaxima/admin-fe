@@ -6,6 +6,7 @@ import Layout from 'component/layout/index.jsx';
 // 页面
 import Home from 'page/home/index.jsx';
 import Login from 'page/login/index.jsx';
+import ErrorPage from 'page/error/index.jsx';
 
 class App extends React.Component {
     render() {
@@ -16,9 +17,10 @@ class App extends React.Component {
                     <Route path="/" render={props => (
                         <Layout>
                             <Switch>
-                                <Route extact path="/" component={Home}/>
+                                <Route exact path="/" component={Home}/>
                                 <Route path="/product" component={Home}/>
                                 <Route path="/product-category" component={Home}/>
+                                <Route component={ErrorPage}/>
                             </Switch>
                         </Layout>
                     )}/>
