@@ -133,7 +133,6 @@ class ProductSave extends React.Component {
         else {
             _mm.errorTips(productCheckResult.msg);
         }
-
     }
 
     render() {

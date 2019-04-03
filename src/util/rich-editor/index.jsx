@@ -1,6 +1,6 @@
 import React from 'react';
-//import Simditor from 'simditor';
-//import 'simditor/styles/simditor.scss';
+import Simditor from 'simditor';
+import 'simditor/styles/simditor.scss';
 import './index.scss';
 
 // 通用的富文本编辑器，依赖jquery
@@ -15,13 +15,13 @@ class RichEditor extends React.Component {
 
     componentWillReceiveProps(nextProps) {
         if (this.props.defaultDetail !== nextProps.defaultDetail) {
-            //this.simditor.setValue(nextProps.defaultDetail);
+            this.simditor.setValue(nextProps.defaultDetail);
         }
     }
 
     loadEditor() {
         let element = this.refs['textarea'];
-        /*this.simditor = new Simditor({
+        this.simditor = new Simditor({
             textarea: $(element),
             defaultValue: this.props.placeholder || '请输入内容',
             upload: {
@@ -29,15 +29,15 @@ class RichEditor extends React.Component {
                 defaultImage: '',
                 fileKey: 'upload_file'
             }
-        });*/
+        });
         this.bindEditorEvent();
     }
 
     // 初始化富文本编辑器的事件
     bindEditorEvent() {
-        /*this.simditor.on('valuechanged', e => {
+        this.simditor.on('valuechanged', e => {
             this.props.onValueChange(this.simditor.getValue());
-        })*/
+        })
     }
 
     render() {
