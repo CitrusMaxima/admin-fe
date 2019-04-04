@@ -90,14 +90,14 @@ class SeckillList extends React.Component {
     render() {
         let tableHeads = [
             {name: '秒杀ID', width: '5%'},
-            {name: '商品信息', width: '40%'},
+            {name: '商品信息', width: '45%'},
             {name: '原价', width: '7.5%'},
             {name: '秒杀价', width: '7.5%'},
-            {name: '状态', width: '10%'},
+            {name: '状态', width: '7.5%'},
             {name: '库存', width: '7.5%'},
             {name: '开始时间', width: '7.5%'},
             {name: '结束时间', width: '7.5%'},
-            {name: '操作', width: '7.5%'}
+            {name: '操作', width: '5%'}
         ];
         return (
             <div id="page-wrapper">
@@ -133,10 +133,9 @@ class SeckillList extends React.Component {
                                         </button>
                                     </td>
                                     <td>999999</td>
-                                    <td>2019-04-04 14:41:03</td>
-                                    <td>2019-04-04 14:41:03</td>
+                                    <td>2019-04-04 14:41</td>
+                                    <td>2019-04-04 14:41</td>
                                     <td>
-                                        <Link className="opera" to={`/product-seckill/detail/${product.id}`}>查看</Link>
                                         <Link className="opera" to={`/product-seckill/save/${product.id}`}>编辑</Link>
                                     </td>
                                 </tr>

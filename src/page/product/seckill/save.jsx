@@ -27,14 +27,10 @@ class SeckillSave extends React.Component {
         this.state = {
             id: this.props.match.params.seckillId,
             name: '',
-            subtitle: '',
-            categoryId: 0,
-            parentCategoryId: 0,
-            subImages: [],
             price: '',
             stock: '',
-            detail: '',
-            status: 1 //商品状态1为在售
+            startTime: '',
+            endTime: ''
         }
     }
 
@@ -47,18 +43,13 @@ class SeckillSave extends React.Component {
         // 有id的时候，表示是编辑功能，需要表单回填
         if (this.state.id) {
             _product.getProduct(this.state.id).then((res) => {
-                let images = res.subImages.split(',');
-                res.subImages = images.map((imgUri) => {
-                    return {
-                        uri: imgUri,
-                        url: res.imageHost + imgUri
-                    }
-                });
                 res.defaultDetail = res.detail;
                 this.setState(res);
             }, (errMsg) => {
                 _mm.errorTips(errMsg);
             });
+            this.state.startTime = '2019-04-04 00:00';
+            this.state.endTime = '2019-04-04 00:00';
         }
     }
 
@@ -69,18 +60,6 @@ class SeckillSave extends React.Component {
         this.setState({
             [name]: value
         });
-    }
-
-    // 品类选择器变化
-    onCategoryChange(categoryId, parentCategoryId) {
-        this.setState({
-            categoryId: categoryId,
-            parentCategoryId: parentCategoryId
-        });
-    }
-
-    getSubImagesString() {
-        return this.state.subImages.map((image) => image.uri).join(',');
     }
 
     // 提交表单
@@ -167,6 +146,11 @@ class SeckillSave extends React.Component {
                                             hideDisabledOptions: true,
                                             defaultValue: [moment('00:00', 'HH:mm'), moment('23:59', 'HH:mm')]
                                         }}
+                                        value={this.state.startTime && this.state.endTime ?
+                                            [moment(this.state.startTime, 'YYYY-MM-DD HH:mm'),
+                                                moment(this.state.endTime, 'YYYY-MM-DD HH:mm')]
+                                            : null
+                                        }
                                         format="YYYY-MM-DD HH:mm"
                                         placeholder={['开始时间', '结束时间']}
                                     />

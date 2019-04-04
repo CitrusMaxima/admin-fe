@@ -7,7 +7,6 @@ import ProductSave from 'page/product/index/save.jsx';
 import ProductDetail from 'page/product/index/detail.jsx';
 import SeckillList from 'page/product/seckill/index.jsx';
 import SeckillSave from 'page/product/seckill/save.jsx';
-import SeckillDetail from 'page/product/seckill/detail.jsx';
 import CategoryList from 'page/product/category/index.jsx';
 import CategoryAdd from 'page/product/category/add.jsx';
 
@@ -20,7 +19,6 @@ class ProductRouter extends React.Component {
                 <Route path="/product/detail/:pid" component={ProductDetail}/>
                 <Route path="/product-seckill/index/:seckillId?" component={SeckillList}/>
                 <Route path="/product-seckill/save/:seckillId?" component={SeckillSave}/>
-                <Route path="/product-seckill/detail/:seckillId" component={SeckillDetail}/>
                 <Route path="/product-category/index/:categoryId?" component={CategoryList}/>
                 <Route path="/product-category/add" component={CategoryAdd}/>
                 <Redirect exact from="/product" to="/product/index"/>
