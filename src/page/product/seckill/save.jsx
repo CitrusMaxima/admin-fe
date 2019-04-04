@@ -13,7 +13,7 @@ moment.locale('zh-cn');
 const {RangePicker} = DatePicker;
 
 import '../index/save.scss';
-import './index1.scss';
+import './antd.scss';
 
 const _mm = new MUtil();
 const _product = new Product();
