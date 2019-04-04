@@ -125,12 +125,11 @@ class SeckillList extends React.Component {
                                     <td>￥{product.price}</td>
                                     <td>￥{product.price}</td>
                                     <td>
-                                        <span>{product.status == 1 ? '在售' : '已下架'}</span>
-                                        <button className="btn btn-xs btn-warning" onClick={(e) => {
-                                            this.onSetProductStatus(e, product.id, product.status)
-                                        }}>
-                                            {product.status == 1 ? '下架' : '上架'}
-                                        </button>
+                                        <span>{product.status == 1 ? '进行中' : '已结束'}</span>
+                                        {product.status == 1 ?
+                                            <button className="btn btn-xs btn-warning" onClick={(e) => {
+                                                this.onSetProductStatus(e, product.id, product.status)
+                                            }}>{'取消'}</button> : ''}
                                     </td>
                                     <td>999999</td>
                                     <td>2019-04-04 14:41</td>
