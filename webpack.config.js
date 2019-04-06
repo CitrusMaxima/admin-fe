@@ -98,10 +98,12 @@ module.exports = {
         },
         proxy: {
             '/manage': {
+                //target: 'http://localhost:8080',
                 target: 'http://www.mmall.com',
                 changeOrigin: true
             },
             '/user/logout.do': {
+                //target: 'http://localhost:8080',
                 target: 'http://www.mmall.com',
                 changeOrigin: true
             }
