@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter as Router, Switch, Route, Redirect, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom';
 
 import Layout from 'component/layout/index.jsx';
 // 页面
@@ -19,7 +19,6 @@ class App extends React.Component {
                 <Switch>
                     <Route exact path="/" component={Home}/>
                     <Route path="/product" component={ProductRouter}/>
-                    <Route path="/product-seckill" component={ProductRouter}/>
                     <Route path="/product-category" component={ProductRouter}/>
                     <Route path="/order/index" component={OrderList}/>
                     <Route path="/order/detail/:orderNumber" component={OrderDetail}/>

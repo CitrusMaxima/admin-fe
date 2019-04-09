@@ -1,12 +1,9 @@
 import React from 'react';
-import {BrowserRouter as Router, Switch, Route, Redirect, Link} from 'react-router-dom';
-
+import {Redirect, Route, Switch} from 'react-router-dom';
 // 页面
 import ProductList from 'page/product/index/index.jsx';
 import ProductSave from 'page/product/index/save.jsx';
 import ProductDetail from 'page/product/index/detail.jsx';
-import SeckillList from 'page/product/seckill/index.jsx';
-import SeckillSave from 'page/product/seckill/save.jsx';
 import CategoryList from 'page/product/category/index.jsx';
 import CategoryAdd from 'page/product/category/add.jsx';
 
@@ -17,12 +14,9 @@ class ProductRouter extends React.Component {
                 <Route path="/product/index" component={ProductList}/>
                 <Route path="/product/save/:pid?" component={ProductSave}/>
                 <Route path="/product/detail/:pid" component={ProductDetail}/>
-                <Route path="/product-seckill/index/:seckillId?" component={SeckillList}/>
-                <Route path="/product-seckill/save/:seckillId?" component={SeckillSave}/>
                 <Route path="/product-category/index/:categoryId?" component={CategoryList}/>
                 <Route path="/product-category/add" component={CategoryAdd}/>
                 <Redirect exact from="/product" to="/product/index"/>
-                <Redirect exact from="/product-seckill" to="/product-seckill/index"/>
                 <Redirect exact from="/product-category" to="/product-category/index"/>
             </Switch>
         );
